@@ -7,7 +7,7 @@
    </head>
    <body>
       <!-- Menu -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
          <div class="container">
             <a class="navbar-brand" href="#">Blog-Minicurso</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">	
@@ -24,6 +24,8 @@
             </div>
          </div>
       </nav>
+      <br>
+      <br>
       <div class="container">
          <div class="row">
             <div class="col-lg-3"></div>
@@ -40,7 +42,7 @@
                      <small class="text-muted">Publicado em: {{publicacao.dt_criaco}}</small>
                      <br>
                      <a href="{%url 'url_editar' publicacao.id%}"><button type="button" class="btn btn-outline-primary">Editar</button></a>
-                     <a href="{% url 'deletar' publicacao.id %}"><button type="button" class="btn btn-outline-danger">Excluir</button> </a>
+                     <a onclick="return confirm('Você tem certeza?')" href="{% url 'deletar' publicacao.id %}"><button type="button" class="btn btn-outline-danger">Excluir</button> </a>
                      <hr>
                      {%endfor%}
                   </div>
@@ -52,7 +54,7 @@
       </div>
       <!-- /.container -->
       <!-- Footer -->
-      <footer class="py-5 bg-danger">
+      <footer class="py-5 bg-danger fixed">
          <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Minicurso 2018</p>
          </div>
