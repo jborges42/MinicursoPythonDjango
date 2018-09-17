@@ -42,7 +42,7 @@
                      <small class="text-muted">Publicado em: {{publicacao.dt_criaco}}</small>
                      <br>
                      <a href="{%url 'url_editar' publicacao.id%}"><button type="button" class="btn btn-outline-primary">Editar</button></a>
-                     <a onclick="return confirm('Você tem certeza?')" href="{% url 'deletar' publicacao.id %}"><button type="button" class="btn btn-outline-danger">Excluir</button> </a>
+                     <a onclick="return confirm('Você tem certeza excluir {{publicacao.titulo}}?')" href="{% url 'deletar' publicacao.id %}"><button type="button" class="btn btn-outline-danger">Excluir</button> </a>
                      <hr>
                      {%endfor%}
                   </div>
