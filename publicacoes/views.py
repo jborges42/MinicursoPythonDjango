@@ -34,3 +34,10 @@ def deletaPublicacao(request, id):
 	posts = Publicacao.objects.get(id=id)
 	posts.delete()
 	return redirect('url_home')	
+
+def post(request, id):
+	data = {}
+	posts = Publicacao.objects.get(id=id)
+	data['publicacoes'] = Publicacao.objects.all()
+
+	return render(request, 'publicacoes/post.html', data)
