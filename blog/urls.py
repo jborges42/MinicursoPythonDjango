@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 from publicacoes.views import home, novaPublicacao, editaPublicacao, deletaPublicacao, post
+=======
+from publicacoes.views import home, novaPublicacao, editaPublicacao, deletaPublicacao
+
+>>>>>>> 8f31b75e9d93809c379d440842dc4b19380fd76e
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='url_home'),
