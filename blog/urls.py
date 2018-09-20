@@ -18,7 +18,6 @@ from django.urls import path
 
 from publicacoes.views import home, novaPublicacao, editaPublicacao, deletaPublicacao, post
 
-from publicacoes.views import home, novaPublicacao, editaPublicacao, deletaPublicacao
 
 
 urlpatterns = [

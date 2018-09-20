@@ -4,7 +4,7 @@ from .form import PublicacaoForm
 
 def home(request):
 	data={}
-	data['publicacoes'] = Publicacao.objects.all()
+	data['publicacoes'] = Publicacao.objects.all().order_by('-id')
 	return render(request, 'publicacoes/home.html', data)
 
 def novaPublicacao(request):
