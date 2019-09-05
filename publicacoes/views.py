@@ -37,7 +37,6 @@ def deletaPublicacao(request, id):
 
 def post(request, id):
 	data = {}
-	posts = Publicacao.objects.get(id=id)
-	data['publicacoes'] = Publicacao.objects.all()
+	data['publicacao'] = Publicacao.objects.get(id=id)
 
 	return render(request, 'publicacoes/post.html', data)
